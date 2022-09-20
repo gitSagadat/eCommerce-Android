@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "815895575178",
+    "project_id": "ecommerce-app-kelineyt",
+    "storage_bucket": "ecommerce-app-kelineyt.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:815895575178:android:86a114491fb2ea12a64b73",
+        "android_client_info": {
+          "package_name": "saga.io.ecommerce_app_kelineyt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "815895575178-b58o3ag5vlc4k3qr573coveqi0kopiqc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxfG90hJfMxJ63Js6DpjM0F-LP79pimnc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "815895575178-b58o3ag5vlc4k3qr573coveqi0kopiqc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
