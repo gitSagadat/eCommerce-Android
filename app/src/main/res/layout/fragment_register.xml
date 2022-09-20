@@ -108,7 +108,7 @@
             android:layout_width="0dp"
             android:layout_height="@dimen/edittextHeight"
             android:layout_marginTop="15dp"
-            android:hint="Email"
+            android:hint="Password"
             android:inputType="textPassword"
             app:layout_constraintEnd_toEndOf="@id/guideRegisterRight"
             app:layout_constraintHorizontal_bias="0.0"
