@@ -10,9 +10,13 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.withContext
 import saga.io.ecommerce_app_kelineyt.R
 import saga.io.ecommerce_app_kelineyt.data.User
 import saga.io.ecommerce_app_kelineyt.databinding.FragmentRegisterBinding
+import saga.io.ecommerce_app_kelineyt.util.RegisterValidation
 import saga.io.ecommerce_app_kelineyt.viewmodel.RegisterViewModel
 
 private val TAG ="RegisterFragment"
@@ -62,6 +66,27 @@ class RegisterFragment : Fragment(R.layout.fragment_register) {
                         binding.buttonRegisterRegister.revertAnimation()
                     }
                     else -> Unit
+                }
+            }
+        }
+        lifecycleScope.launchWhenStarted {
+            viewModel.validation.collect{
+                validation ->
+                if (validation.email is RegisterValidation.Failed){
+                    withContext(Dispatchers.Main){
+                        binding.edEmailRegister.apply {
+                            requestFocus()
+                            error = validation.email.message
+                        }
+                    }
+                }
+                if (validation.password is RegisterValidation.Failed){
+                    withContext(Dispatchers.Main){
+                        binding.edEdPasswordRegister.apply {
+                            requestFocus()
+                            error = validation.password.message
+                        }
+                    }
                 }
             }
         }
