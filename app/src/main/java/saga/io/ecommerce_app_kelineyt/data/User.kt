@@ -7,5 +7,5 @@ data class User(
     var imagePath:String = ""
 
 ){
-    constructor(): this("","","","")
+    constructor(trim: String, trim1: String) : this("","","","")
 }

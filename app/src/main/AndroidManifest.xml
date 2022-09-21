@@ -4,6 +4,7 @@
     package="saga.io.ecommerce_app_kelineyt">
 
     <application
+        android:name=".KlaytnApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -14,13 +15,9 @@
         android:theme="@style/Theme.ECommerceAppKelineYt"
         tools:targetApi="31">
         <activity
-            android:name=".ShopingActivity"
+            android:name=".activities.ShoppingActivity"
             android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="false"
-            android:label="@string/title_activity_main"
-            android:theme="@style/Theme.ECommerceAppKelineYt.NoActionBar" />
+
         <activity
             android:name=".activities.LoginRegisterActivity"
             android:exported="true">
